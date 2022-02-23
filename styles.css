@@ -1,38 +1,66 @@
-html{
-    background-color: beige;
+:root{
+    --violet: #c4b5fd;
+    --light-purple: #ddd6fe;
+    --purple: #a78bfa;
+    --light: #ede9fe;
+    --lightest: #f5f3ff;
+}
+
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@1,300&display=swap');
+body{
+    background-color: var(--light);
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     /*background: linear-gradient(35deg,
     beige, brown);*/
 }
 
-body{
+.header{
     display: flex;
+    flex-direction: row;
+    background-color: var(--light-purple);
+    width: 40vw;
+    height: 30vh;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    margin-top: 50px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19),0 6px 6px rgba(0,0,0,0.23);
+    font-family: 'Roboto Condensed', sans-serif;
+    overflow: hidden;
+}
+#form-container{
+    position: relative;
+}
+.bday-form{
+    display: none;
+    text-align: center;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    padding: 10px;
+    left: 40vw;
+    border: none;
+    width: 200px;
+    height: 150px;
+    position: absolute;
+    justify-self: center;
     justify-content: center;
     align-items: center;
+    align-content: center;
+    top: 160px;
+    right: 40px;
+    left: 2px;
+    border-radius: none;
+    font-family: 'Roboto Condensed', sans-serif;
 }
-
-#main{
-    overflow: hidden;
-    background-color: burlywood;
-    width: 60%;
-    height: 40%;
-    margin-left: 120px;
-    margin-top: 50px;
-    padding: 10px;
-    box-shadow:0 10px 20px rgba(0,0,0,0.19),0 6px 6px rgba(0,0,0,0.23);
-}
-h1{
-    padding: 20px;
-    padding-bottom: 30px;
-}
-#person-bday{
-    padding: 10px;
-}
-
-h2{
-    color: tan;
-    margin-bottom: 20px;
-}
-#heading{
-    color: black;
+.bday-form.show{
+    display: block;
 }

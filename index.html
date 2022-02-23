@@ -1,21 +1,31 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Bday Reminder for me to make</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="styles.css">
-    </head>
-    <body>
-    <div id="main">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Reminder</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="header">
         <h1>Birthday Reminder</h1>
-        <form id="person-bday">
-            <input type="text" placeholder="Enter person's name" class="input">
-            <input type="date" class="input">
-            <input type="submit" value="Add +" id="add-button">
-        </form>
-        <h2 id="heading"></h2> 
-        <script src="script.js"></script>
+        <h4 id="date"></h4>
     </div>
-    </body> 
+    
+    <div class="bday-count">
+    </div>
+
+    <div id="form-container">
+        <form class="bday-form show">
+            <label for="name" class="name" id="name" required>Name:</label>
+            <input type="text" id="name" name="name">
+
+            <label for="bday">Birthdate:</label>
+            <input type="date" id="bdate" name="bdate" required>
+            <br>
+            <button type="submit" class="add-bday">Add</button>
+        </form>
+    </div>
+</body>
 </html>
